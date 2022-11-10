@@ -78,5 +78,5 @@ while(TRUE){
             list("EUR", EUR$ask, EUR$bid, EUR$date, EUR$midpoint))
   dbExecute(con, "INSERT INTO forex_rates (currency, ask, bid, date, midpoint, time) VALUES ($1, $2, $3, $4, $5, current_timestamp)", 
             list("GBP", GBP$ask, GBP$bid, GBP$date, GBP$midpoint))
-  Sys.sleep(86400)
+  Sys.sleep(30)
 }
