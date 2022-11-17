@@ -46,19 +46,14 @@ while(TRUE){
   quotes <- quote$quotes
   AUD <- as.data.frame(quotes$AUD)
   AUD %<>% mutate(date = as.Date(date))
-  return(AUD)
   JPY <- as.data.frame(quotes$JPY)
   JPY %<>% mutate(date = as.Date(date))
-  return(JPY)
   CAD <- as.data.frame(quotes$CAD)
   CAD %<>% mutate(date = as.Date(date))
-  return(CAD)
   EUR <- as.data.frame(quotes$EUR)
   EUR %<>% mutate(date = as.Date(date))
-  return(EUR)
   GBP <- as.data.frame(quotes$GBP)
   GBP %<>% mutate(date = as.Date(date))
-  return(GBP)
   ##Table creation and data entry
   dbExecute(con, "CREATE TABLE IF NOT EXISTS forex_rates (
             id SERIAL PRIMARY KEY,
